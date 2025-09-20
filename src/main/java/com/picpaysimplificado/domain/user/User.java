@@ -24,6 +24,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -32,26 +33,31 @@ public class User {
 	
 	private String lastName;
 	
+	private String password;
+	
 	@Column(unique = true, nullable = false)
 	private String document;
 	
 	@Column(unique = true, nullable = false)
 	private String email;
 	
-	private String password;
-	
-	private BigDecimal balance;
-	
 	@Enumerated(EnumType.STRING)
 	private UserType userType;
 	
+	private BigDecimal balance;
+	
+
 	public User(UserDTO dataDTO) {
 		this.firstName = dataDTO.firstName();
 		this.lastName = dataDTO.lastName();
-		this.balance = dataDTO.balance();
-		this.userType = dataDTO.userType();
 		this.password = dataDTO.password();
+		this.document = dataDTO.document();
 		this.email = dataDTO.email();
+		this.userType = dataDTO.userType();
+		this.balance = dataDTO.balance();
+
+
+	
 	}
 	
 	
