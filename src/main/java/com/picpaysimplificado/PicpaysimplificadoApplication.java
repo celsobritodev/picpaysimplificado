@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Resolvendo DESAFIO de VAGA BACKEND com Java Spring
 // https://youtu.be/QXunBiLq2SM
 
+// COMEÇANDO com TESTES UNITÁRIOS no JAVA SPRING | Junit + Mockito
+// https://youtu.be/T6ChO8LQxRE
+
 
 @SpringBootApplication
 public class PicpaysimplificadoApplication {
